@@ -1,0 +1,32 @@
+{
+    "name": "linking-you/contao-redirecter",
+    "description": "Contao URL Redirector Extension for Contao Open Source CMS",
+    "type": "contao-bundle",
+    "require": {
+        "contao/core-bundle": "^4.3",
+        "contao-community-alliance/composer-plugin":"~2.4 || ~3.0",
+        "codefog/contao-haste": "~4.17"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "conflict": {
+        "contao/core": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "license": "LGPL-3.0+",
+    "authors": [
+        {
+            "name": "Frank Mueller",
+            "email": "frank.mueller@linking-you.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LinkingYou\\ContaoRedirecter\\": "src/"
+        }
+    },
+    "extra" : {
+        "contao-manager-plugin": "LinkingYou\\ContaoRedirecter\\ContaoManager\\Plugin"
+    }
+}
