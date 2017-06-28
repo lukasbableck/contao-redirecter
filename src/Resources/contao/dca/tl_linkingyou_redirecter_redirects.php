@@ -181,8 +181,11 @@ $GLOBALS['TL_DCA']['tl_linkingyou_redirecter_redirects'] = array
             'sorting'                 => true,
             'flag'                    => 1,
             'inputType'               => 'pageTree',
-            'eval'                    => array('mandatory'=>true, 'maxlength'=>255),
-            'sql'                     => "varchar(255) NOT NULL default ''"
+            'sql'                     => "varchar(255) NOT NULL default ''",
+            'foreignKey'              => 'tl_page.title',
+            'eval'                    => array('mandatory'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
+            //'sql'                     => "int(10) unsigned NOT NULL default '0'",
+            'relation'                => array('type'=>'hasOne', 'load'=>'eager')
         ),
         'destination_url' => array
         (
