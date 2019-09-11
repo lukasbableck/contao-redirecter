@@ -46,6 +46,9 @@ class Redirecter extends \Frontend {
                     break;
             }
 
+            // Fix: Redirects with parameter does not works with html-encoded strings
+            $url = html_entity_decode($url);
+
             switch ($row["type"]) {
                 case "301" : // Umleitung (permanent)
                     Controller::redirect($url, 301);
