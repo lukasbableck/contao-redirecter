@@ -71,14 +71,8 @@ $GLOBALS['TL_DCA']['tl_linkingyou_redirecter_redirects'] = array
             'copy' => array
             (
                 'label'               => &$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['copy'],
-                'href'                => 'act=paste&amp;mode=copy',
-                'icon'                => 'copy.gif'
-            ),
-            'cut' => array
-            (
-                'label'               => &$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['cut'],
-                'href'                => 'act=paste&amp;mode=cut',
-                'icon'                => 'cut.gif'
+                'href'                => 'act=copy',
+                'icon'                => 'copy.gif',
             ),
             'delete' => array
             (
