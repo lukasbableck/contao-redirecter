@@ -211,7 +211,8 @@ $GLOBALS['TL_DCA']['tl_linkingyou_redirecter_redirects'] = array
                 '301' => '301 Permanente Weiterleitung',
                 '302' => '302 Temporäre Weiterleitung'
             ),
-            'sql'                     => "varchar(128) NOT NULL default ''"
+            'sql'                     => "varchar(128) NOT NULL default ''",
+            'default' => '302'
         ),
         'published' => array
         (
