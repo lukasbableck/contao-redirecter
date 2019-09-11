@@ -149,7 +149,8 @@ $GLOBALS['TL_DCA']['tl_linkingyou_redirecter_redirects'] = array
             'eval'                    => array(
                 'mandatory'=>true,
                 'maxlength'=>255,
-                'rgxp' => 'redirectsource'
+                'rgxp' => 'redirectsource',
+                'unique' => true
             ),
             'sql'                     => "varchar(255) NOT NULL default ''"
         ),
