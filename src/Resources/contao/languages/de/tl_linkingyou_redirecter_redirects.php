@@ -12,8 +12,8 @@
 
 $GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['title_legend'] = 'URL-Umleitung';
 
-$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['source_url'][0] = 'Quelle';
-$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['source_url'][1] = '';
+$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['source_url'][0] = 'Request-URI';
+$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['source_url'][1] = 'Ohne Schema, z.B.: /meindokument';
 
 $GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['destination_type'][0] = 'Ziel-Typ';
 $GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['destination_type'][1] = '';
