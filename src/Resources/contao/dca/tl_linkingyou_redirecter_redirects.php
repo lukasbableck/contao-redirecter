@@ -43,15 +43,11 @@ $GLOBALS['TL_DCA']['tl_linkingyou_redirecter_redirects'] = array
             'panelLayout'             => 'filter;sort,search,limit'
         ),
         'label' => array(
-            'fields' => array('source_url', 'destination_url'),
-            'format' => '%s -> %s',
+            'fields' => array('source_url', 'destination_url', 'counter'),
+            'format' => '%s -> %s (Aufrufe: %s)',
         ),
         'global_operations' => array
         (
-            'new' => array(
-                'label' => &$GLOBALS['TL_LANG']['MSC']['create'],
-                'href'                => 'act=create',
-            ),
             'all' => array
             (
                 'label'               => &$GLOBALS['TL_LANG']['MSC']['all'],
@@ -79,7 +75,7 @@ $GLOBALS['TL_DCA']['tl_linkingyou_redirecter_redirects'] = array
                 'label'               => &$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['delete'],
                 'href'                => 'act=delete',
                 'icon'                => 'delete.gif',
-                'attributes'          => 'onclick="if(!confirm(\'' . $GLOBALS['TL_LANG']['MSC']['deleteConfirm'] . '\'))return false;Backend.getScrollOffset()"'
+                'attributes'          => 'onclick="if(!confirm(\'Wirklich löschen?\'))return false;Backend.getScrollOffset()"'
             ),
             'toggle' => [
                 'label'                 => &$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['toggle'],
@@ -111,9 +107,9 @@ $GLOBALS['TL_DCA']['tl_linkingyou_redirecter_redirects'] = array
     'palettes' => array
     (
         '__selector__'              => array('destination_type'),
-        'default'                     => '{title_legend},source_url,destination_type,type,published',
-        'external_destination'                     => '{title_legend},source_url,destination_type,destination_url,type,published',
-        'internal_destination'                     => '{title_legend},source_url,destination_type,destination_page,type,published'
+        'default'                     => '{title_legend},source_url,destination_type,type,published,counter',
+        'external_destination'                     => '{title_legend},source_url,destination_type,destination_url,type,published,counter',
+        'internal_destination'                     => '{title_legend},source_url,destination_type,destination_page,type,published,counter'
     ),
 
     // Fields
@@ -218,6 +214,11 @@ $GLOBALS['TL_DCA']['tl_linkingyou_redirecter_redirects'] = array
             'inputType'               => 'checkbox',
             'eval'                    => array('doNotCopy'=>true),
             'sql'                     => "char(1) NOT NULL default ''"
+        ),
+        'counter' => array(
+            'label'                     => &$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['counter'],
+            'inputType'                 => 'text',
+            'sql'                       => "int(10) unsigned NOT NULL default '0'"
         )
     )
 );

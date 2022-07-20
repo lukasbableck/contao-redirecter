@@ -28,4 +28,8 @@ $GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['type'][0] = 'Redirect
 $GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['type'][1] = 'Status-Code';
 
 $GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['published'][0] = 'veröffentlicht';
-$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['type'][1] = '';
+$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['published'][1] = '';
+
+$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['counter'][0] = 'Counter';
+$GLOBALS['TL_LANG']['tl_linkingyou_redirecter_redirects']['counter'][1] = '';
+
