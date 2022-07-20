@@ -13,22 +13,14 @@
 namespace LinkingYou\ContaoRedirecter\EventListener;
 
 use Contao\Controller;
-use Contao\CoreBundle\Event\ContaoCoreEvents;
 use Contao\CoreBundle\Framework\ContaoFramework;
-use Contao\Database;
-use Contao\Environment;
-use Contao\Events;
 use Contao\PageModel;
-use Contao\CoreBundle\ServiceAnnotation\Hook;
 use LinkingYou\ContaoRedirecter\Model\Redirect;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Contracts\Cache\ItemInterface;
-use webignition\RobotsTxt\Record\Record;
 
 class Redirecter implements EventSubscriberInterface {
 
@@ -93,10 +85,8 @@ class Redirecter implements EventSubscriberInterface {
             switch ($redirect->type) {
                 case "301" : // Umleitung (permanent)
                     Controller::redirect($url, 301);
-                    exit;
                 case "302" : // Umleitung (temporär)
                     Controller::redirect($url, 302);
-                    exit;
             }
         }
 

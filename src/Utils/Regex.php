@@ -16,7 +16,8 @@ use Contao\Widget;
 
 class Regex {
 
-    public function addRedirectSourceRegexp($strRegexp, $varValue, Widget $objWidget) {
+    public function addRedirectSourceRegexp($strRegexp, $varValue, Widget $objWidget): bool
+    {
         if ($strRegexp == 'redirectsource')
         {
             if (!preg_match('/^\/.*$/', $varValue))
