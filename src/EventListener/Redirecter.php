@@ -76,7 +76,10 @@ class Redirecter implements EventSubscriberInterface {
 
             if (!$inCache) {
                 $redirect->counter++;
-                $redirect->save();
+                try { // Sometimes "save" throws an exception
+                    $redirect->save();
+                } catch (\Exception $exception) {
+                }
             }
 
             // Fix: Redirects with parameter does not works with html-encoded strings
